@@ -12,13 +12,21 @@
       <h1>{{cliente.nome}}</h1>
       <a href="mailto:{{cliente.email}}">{{cliente.email}}</a>
     </ion-label>
-  </ion-item> 
-  
+
+    <ion-button color="warning" (click)="alterarCliente(cliente.id!)">
+      <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+    </ion-button>
+
+    <ion-button color="danger" (click)="excluirCliente(cliente.id!)">
+      <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+    </ion-button>
+   </ion-item>
+
   <ion-button color="success" expand="block" routerLink="/create-cliente">
     Adicionar Cliente
   </ion-button>
 
-  <!-- criar Produtos.models.ts 
+  <!-- criar Produtos.models.ts
     pasta-listas de produtos
     Criar um formulário cliente
   -->
