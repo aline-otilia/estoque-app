@@ -5,14 +5,14 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  
-  <ion-input type="text" fill="outline" label="Título" labelPlacement="floating" helperText="Título" ></ion-input><br>
+
+  <ion-input type="text" fill="outline" label="Título" labelPlacement="floating" helperText="Título" [(ngModel)]="titulo" ></ion-input><br>
   <br>
-  <ion-input type="text" fill="outline" label="Descrição" labelPlacement="floating" helperText="Descricao" ></ion-input><br>
+  <ion-input type="text" fill="outline" label="Descrição" labelPlacement="floating" helperText="Descricao" [(ngModel)]="descricao"></ion-input><br>
   <br>
-  <ion-input type="text" fill="outline" label="Preço" labelPlacement="floating" helperText="Preço" ></ion-input><br>
+  <ion-input type="text" fill="outline" label="Preço" labelPlacement="floating" helperText="Preço" [(ngModel)]="preco" ></ion-input><br>
   <br>
-  <ion-input type="text" fill="outline" label="Imagem" labelPlacement="floating" helperText="Imagem" ></ion-input><br>
+  <ion-input type="text" fill="outline" label="Imagem" labelPlacement="floating" helperText="Imagem" [(ngModel)]="nomeImagem"></ion-input><br>
   <br>
-  <ion-button   color="danger" expand="block">ALTERAR</ion-button>
+  <ion-button (click)="alterar()" color="danger" expand="block">ALTERAR PRODUTO</ion-button>
 </ion-content>
